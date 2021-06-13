@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Tutorial git - Conf. Inicial</title>
+    <link rel="shortcut icon" href="../img/iconoPagina.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Tutorial git <img src="../img/logoGit.png" alt=""> </a></h1>
+    </header>
+        <section id="menu">
+            <ul>
+                <li><a class="puntero" href="./index.html">Introducción</a></li>
+                <li><a class="puntero" href="./confInicial.html">Conf. inicial</a>
+                    <ul>
+                        <li><a href="./confInicial.html#confEmail">usr.email</a></li>
+                        <li><a href="./confInicial.html#confUser">usr.name</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./areaTrabajo.html" class="puntero">Área de trabajo</a>
+                    <ul>
+                        <li><a href="./areaTrabajo.html#cmdInit">init</a></li>
+                        <li><a href="./areaTrabajo.html#cmdClone">clone</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./cambios.html" class="puntero">Cambios</a>
+                    <ul>
+                        <li><a href="./cambios.html#cmdAdd">add</a></li>
+                        <li><a href="./cambios.html#cmdRestore">restore</a></li>
+                        <li><a href="./cambios.html#cmdRm">rm</a></li>
+                        <li><a href="./cambios.html#cmdCheckout">checkout</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./historialEstado.html" class="puntero">Historial/Estado</a>
+                    <ul>
+                        <li><a href="./historialEstado.html#cmdDiff">diff</a></li>
+                        <li><a href="./historialEstado.html#cmdLog">log</a></li>
+                        <li><a href="./historialEstado.html#cmdStatus">status</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./ramificacion.html" class="puntero">Ramificación</a>
+                    <ul>
+                        <li><a href="./ramificacion.html#cmdBranch">branch</a></li>
+                        <li><a href="./ramificacion.html#cmdCommit">commit</a></li>
+                        <li><a href="./ramificacion.html#cmdMarge">marge</a></li>
+                        <li><a href="./ramificacion.html#cmdSwitch">switch</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./colaboracion.html" class="puntero">Colaboración</a>
+                    <ul>
+                        <li><a href="./colaboracion.html#cmdFetch">fetch</a></li>
+                        <li><a href="./colaboracion.html#cmdPull">pull</a></li>
+                        <li><a href="./colaboracion.html#cmdPush">push</a></li>
+                        <li><a href="./colaboracion.html#cmdRemote">remote</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+    <section id="contenido">
+        <section id="usrEmail" class="comandoGit">
+            <h2>Configuración Inicial</h2><br><br>
+                <div>
+                    
+                    <p>
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Tu Identidad
+                        </p>
+                        <br>
+                        <p>
+                            Lo primero que deberás hacer cuando instales Git es establecer 
+                            tu nombre de usuario y dirección de correo electrónico. Esto 
+                            es importante porque los "commits" de Git usan esta información, 
+                            y es introducida de manera inmutable en los commits que envías. 
+                        </p>
+                    </p>
+                    <section id="cmdEmail">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            git config --global user.email
+                        </p>
+                        <br>
+                        <p>
+                            El siguiente comando se usa para establecer un email del autor de las versiones:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/confInicial/cmdEmail.png" >
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                    <section id="cmdName">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            git config --global user.name
+                        </p>
+                        <br>
+                        <p>
+                            El siguiente comando se usa para establecer el nombre del autor:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/confInicial/cmdName.png" >
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                Sólo necesitas hacer esto una vez si especificas la opción --global, 
+                                ya que Git siempre usará esta información para todo lo que hagas en 
+                                ese sistema. Si quieres sobrescribir esta información con otro nombre 
+                                o dirección de correo para proyectos específicos, puedes ejecutar el 
+                                comando sin la opción --global cuando estés en ese proyecto.
+                            </p>
+                        </p>
+                    </section>
+                </div>
+        </section>
+    </section>
+
+    <footer id="basePie">
+        <section id="pie">
+            <section class="columnaUno">
+                <h3><a class="pieLogo" href="./index.html">Tutorial git<img src="../img/logoGit.png" alt=""> </a></h3>
+            </section>
+            <section class="columnaDos">
+                Copyright © 2021 MRRM Inc.<br>
+                Todos los derechos reservados. <br>
+                By Martín Roberto
+            </section>
+        </section>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

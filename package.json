@@ -1,0 +1,23 @@
+{
+  "name": "tutorial-git",
+  "version": "1.0.0",
+  "description": "Servidor Express-Rutas",
+  "main": "servidor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/servidor.js",
+    "dev": "nodemon src/servidor.js"
+  },
+  "keywords": [
+    "Express",
+    "Rutas"
+  ],
+  "author": "Martín Roberto",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Tutorial git - Colaboración</title>
+    <link rel="shortcut icon" href="../img/iconoPagina.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Tutorial git <img src="../img/logoGit.png" alt=""> </a></h1>
+    </header>
+        <section id="menu">
+            <ul>
+                <li><a class="puntero" href="./index.html">Introducción</a></li>
+                <li><a class="puntero" href="./confInicial.html">Conf. inicial</a>
+                    <ul>
+                        <li><a href="./confInicial.html#confEmail">usr.email</a></li>
+                        <li><a href="./confInicial.html#confUser">usr.name</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./areaTrabajo.html" class="puntero">Área de trabajo</a>
+                    <ul>
+                        <li><a href="./areaTrabajo.html#cmdInit">init</a></li>
+                        <li><a href="./areaTrabajo.html#cmdClone">clone</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./cambios.html" class="puntero">Cambios</a>
+                    <ul>
+                        <li><a href="./cambios.html#cmdAdd">add</a></li>
+                        <li><a href="./cambios.html#cmdRestore">restore</a></li>
+                        <li><a href="./cambios.html#cmdRm">rm</a></li>
+                        <li><a href="./cambios.html#cmdCheckout">checkout</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./historialEstado.html" class="puntero">Historial/Estado</a>
+                    <ul>
+                        <li><a href="./historialEstado.html#cmdDiff">diff</a></li>
+                        <li><a href="./historialEstado.html#cmdLog">log</a></li>
+                        <li><a href="./historialEstado.html#cmdStatus">status</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./ramificacion.html" class="puntero">Ramificación</a>
+                    <ul>
+                        <li><a href="./ramificacion.html#cmdBranch">branch</a></li>
+                        <li><a href="./ramificacion.html#cmdCommit">commit</a></li>
+                        <li><a href="./ramificacion.html#cmdMarge">marge</a></li>
+                        <li><a href="./ramificacion.html#cmdSwitch">switch</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./colaboracion.html" class="puntero">Colaboración</a>
+                    <ul>
+                        <li><a href="./colaboracion.html#cmdFetch">fetch</a></li>
+                        <li><a href="./colaboracion.html#cmdPull">pull</a></li>
+                        <li><a href="./colaboracion.html#cmdPush">push</a></li>
+                        <li><a href="./colaboracion.html#cmdRemote">remote</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+    <section id="contenido">
+        <section id="usrEmail" class="comandoGit">
+            <h2>Colaboración</h2><br><br>
+                <div>
+                    
+                    <section id="cmdFetch">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Traer datos remotos
+                        </p>
+                        <br>
+                        <p>
+                            <b> git fetch </b>
+                            <br>
+                            <br>
+                            Funciona para obtener datos de tus proyectos remotos. El comando irá al proyecto 
+                            remoto y se traerá todos los datos que aun no tienes de dicho remoto. Luego de 
+                            hacer esto, tendrás referencias a todas las ramas del remoto, las cuales puedes 
+                            combinar e inspeccionar cuando quieras. 
+                            <br>
+                            <br>
+                            Si clonas un repositorio, el comando de clonar automáticamente añade ese repositorio 
+                            remoto con el nombre “origin”. Por lo tanto, <b> git fetch origin</b> se trae todo el trabajo 
+                            nuevo que ha sido enviado a ese servidor desde que lo clonaste (o desde la última vez 
+                            que trajiste datos). Es importante destacar que el comando <b>git fetch</b> solo trae datos 
+                            a tu repositorio local  ni lo combina automáticamente con tu trabajo ni modifica el 
+                            trabajo que llevas hecho. 
+
+                            <br>
+                            <br>
+                            <p style="text-align: center;">
+                                <b>git fetch [remote-name]</b>
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+
+                    <section id="cmdPull">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Ver los Cambios Preparados y No Preparados
+                        </p>
+                        <br>
+                        <p>
+                            <b> git pull </b>
+                            <br>
+                            <br>
+                            Su funsióm es traer y combinar automáticamente la rama remota con tu rama actual. 
+                            Es posible que este sea un flujo de trabajo mucho más cómodo y fácil para ti; y 
+                            por defecto, el comando <b> git clone</b> le indica automáticamente a tu rama maestra 
+                            local que rastree la rama maestra remota (o como se llame la rama por defecto) 
+                            del servidor del que has clonado. Generalmente, al ejecutar <b> git pull </b> traerás 
+                            datos del servidor del que clonaste originalmente y se intentará combinar 
+                            automáticamente la información con el código en el que estás trabajando.
+                            <br>
+                            <br>
+                            Incorpora cambios de un repositorio remoto en la rama actual. En su modo predeterminado, 
+                            <b> git pull </b>es la abreviatura de <b> git fetch </b> seguido de <b> git merge FETCH_HEAD </b>.
+                            <br>
+                            <br>
+                            <p>
+                                Si quieres ver lo que has preparado y será incluido en la próxima confirmación, puedes usar 
+                                <b>git diff --staged</b>. Este comando compara tus cambios preparados con la última instantánea 
+                                confirmada.
+                            </p>
+                            <br>
+                            <br>
+                            <p style="text-align: center;">
+                                Sintaxis
+                                <br>
+                                <b>git pull <i>Nombre de la rama remota</i></b>
+                            </p>
+                        </p>
+                    </section>
+                    <section id="cmdPush">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Enviar a Tus Remotos
+                        </p>
+                        <br>
+                        <p>
+                            <b> git push </b>
+                            <br>
+                            <br>
+                            Cuando tienes un proyecto que quieres compartir, debes enviarlo a 
+                            un servidor. El comando para hacerlo es simple:
+                            <br>
+                            <p style="text-align: center;">
+                                <b>git push [nombre-remoto] [nombre-rama]</b>
+                            </p>
+                            Si quieres enviar tu rama <b> master </b> a tu servidor <b> origin </b>(recuerda, 
+                            clonar un repositorio establece esos nombres automáticamente), 
+                            entonces puedes ejecutar el siguiente comando y se enviarán todos 
+                            <b> los commits </b> que hayas hecho al servidor:
+                            <br>
+                            <br>
+                            <p style="text-align: center;">
+                                <b>git push origin master</b>
+                            </p>
+                            <br>
+                            <br>
+                            Este comando solo funciona si clonaste de un servidor sobre el 
+                            que tienes permisos de escritura y si nadie más ha enviado datos 
+                            por el medio. Si alguien más clona el mismo repositorio que tú y 
+                            envía información antes que tú, tu envío será rechazado. Tendrás 
+                            que traerte su trabajo y combinarlo con el tuyo antes de que puedas 
+                            enviar datos al servidor.
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                   <section id="cmdRemote">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Trabajar con Remotos
+                        </p>
+                        <p>
+                            <br>
+                            <br>
+                            Para poder colaborar en cualquier proyecto Git, necesitas saber 
+                            cómo gestionar repositorios remotos. Los repositorios remotos 
+                            son versiones de tu proyecto que están hospedadas en Internet 
+                            o en cualquier otra red. Puedes tener varios de ellos, y en cada 
+                            uno tendrás generalmente permisos de solo lectura o de lectura y 
+                            escritura. Colaborar con otras personas implica gestionar estos 
+                            repositorios remotos enviando y trayendo datos de ellos cada vez 
+                            que necesites compartir tu trabajo.
+                            <br>
+                            <br>
+                            Para ver los remotos que tienes configurados, debes ejecutar el comando:
+                            <br>
+                            <br>
+                            <b> git remote </b>
+                            <br>
+                            <br>
+                            Mostrará los nombres de cada uno de los remotos que tienes especificados. 
+                            Si has clonado tu repositorio, deberías ver al menos <b> origin</b>.
+
+
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/colaboracion/cmdRemote.png">
+                            </p>
+                            <br>
+                            <br>
+                            La opción <b> -v</b>, la cual muestra las URLs que Git ha asociado al nombre 
+                            y que serán usadas al leer y escribir en ese remoto:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/colaboracion/cmdRemoteV.png">
+                            </p>
+                            <br>
+                            <br>
+                            Para añadir un remoto nuevo y asociarlo a un nombre que puedas referenciar 
+                            fácilmente, se debe de ejecutar el siguiente comando:
+                            <br>
+                            <br>
+                            <p style="text-align: center;">
+                                <b>git remote add [nombre] [url]</b>
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/colaboracion/cmdRemoteAdd.png">
+                            </p>
+                            <br>
+                            <br>
+                            Si quieres ver más información acerca de un remoto en particular, puedes ejecutar el comando:
+                            <br>
+                            <br>
+                            <p style="text-align: center;">
+                                <b>git remote show [nombre-remoto]</b>
+                            </p>
+                            <br>
+                            <br>
+                            Para cambiar el nombre de la referencia de un remoto puedes ejecutar el siguiente comando:
+                            <br>
+                            <br>
+                            <p style="text-align: center;">
+                                <b>git remote rename <i>nombreActual</i> <i>nombreNuevo</i></b>
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/colaboracion/cmdRename.png">
+                            </p>
+                            <br>
+                            <br>
+                            Para eliminar un remoto:
+                            <br>
+                            <br>
+                            <p style="text-align: center;">
+                                <b>git remote rm <i>nombreDelRemoto</i> </b>
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/colaboracion/cmdRemove.png">
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                </div>
+        </section>
+    </section>
+
+    <footer id="basePie">
+        <section id="pie">
+            <section class="columnaUno">
+                <h3><a class="pieLogo" href="./index.html">Tutorial git<img src="../img/logoGit.png" alt=""> </a></h3>
+            </section>
+            <section class="columnaDos">
+                Copyright © 2021 MRRM Inc.<br>
+                Todos los derechos reservados. <br>
+                By Martín Roberto
+            </section>
+        </section>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

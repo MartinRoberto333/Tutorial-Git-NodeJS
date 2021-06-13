@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Tutorial git - Cambios</title>
+    <link rel="shortcut icon" href="../img/iconoPagina.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Tutorial git <img src="../img/logoGit.png" alt=""> </a></h1>
+    </header>
+        <section id="menu">
+            <ul>
+                <li><a class="puntero" href="./index.html">Introducción</a></li>
+                <li><a class="puntero" href="./confInicial.html">Conf. inicial</a>
+                    <ul>
+                        <li><a href="./confInicial.html#confEmail">usr.email</a></li>
+                        <li><a href="./confInicial.html#confUser">usr.name</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./areaTrabajo.html" class="puntero">Área de trabajo</a>
+                    <ul>
+                        <li><a href="./areaTrabajo.html#cmdInit">init</a></li>
+                        <li><a href="./areaTrabajo.html#cmdClone">clone</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./cambios.html" class="puntero">Cambios</a>
+                    <ul>
+                        <li><a href="./cambios.html#cmdAdd">add</a></li>
+                        <li><a href="./cambios.html#cmdRestore">restore</a></li>
+                        <li><a href="./cambios.html#cmdRm">rm</a></li>
+                        <li><a href="./cambios.html#cmdCheckout">checkout</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./historialEstado.html" class="puntero">Historial/Estado</a>
+                    <ul>
+                        <li><a href="./historialEstado.html#cmdDiff">diff</a></li>
+                        <li><a href="./historialEstado.html#cmdLog">log</a></li>
+                        <li><a href="./historialEstado.html#cmdStatus">status</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./ramificacion.html" class="puntero">Ramificación</a>
+                    <ul>
+                        <li><a href="./ramificacion.html#cmdBranch">branch</a></li>
+                        <li><a href="./ramificacion.html#cmdCommit">commit</a></li>
+                        <li><a href="./ramificacion.html#cmdMarge">marge</a></li>
+                        <li><a href="./ramificacion.html#cmdSwitch">switch</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./colaboracion.html" class="puntero">Colaboración</a>
+                    <ul>
+                        <li><a href="./colaboracion.html#cmdFetch">fetch</a></li>
+                        <li><a href="./colaboracion.html#cmdPull">pull</a></li>
+                        <li><a href="./colaboracion.html#cmdPush">push</a></li>
+                        <li><a href="./colaboracion.html#cmdRemote">remote</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+    <section id="contenido">
+        <section id="usrEmail" class="comandoGit">
+            <h2>Guardando cambios en el Repositorio</h2><br><br>
+                <div>
+                    
+                    <section id="cmdAdd">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Rastrear Archivos Nuevos
+                        </p>
+                        <br>
+                        <p>
+                            <b> git add </b>
+                            <br>
+                            <br>
+                            Para comenzar a rastrear un archivo debes usar el comando git add. 
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/cambios/cmdAdd.png" alt="Img de copias copiasInstantaneas">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                Puedes ver que está siendo rastreado porque aparece luego del 
+                                encabezado “Cambios a ser confirmados”. 
+                                <br>
+                                Si confirmas en este punto, se guardará en el historial la versión 
+                                del archivo correspondiente al instante en que ejecutaste git add.
+                                El comando git add puede recibir tanto una ruta de archivo como de 
+                                un directorio; si es de un directorio, el comando añade recursivamente 
+                                los archivos que están dentro de él.
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                    <section id="cmdRestore">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Restaurar archivos de árbol de trabajo
+                        </p>
+                        <br>
+                        <p>
+                            <b> git restore </b>
+                            <br>
+                            <br>
+                            Restaurar rutas especificadas en el árbol de trabajo con algunos 
+                            contenidos de una fuente de restauración. Si se realiza un 
+                            seguimiento de una ruta pero no existe en la fuente de restauración, 
+                            se eliminará para que coincida con la fuente. 
+                            <br>
+                            El comando también se puede usar para restaurar el contenido en el 
+                            índice con --staged, o restaurar tanto el árbol de trabajo como el 
+                            índice con --staged --worktree.
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/cambios/cmdRestore.png" alt="Img de copias copiasInstantaneas">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                En el ejemplo se aprecia como restauro el archivo al directorio de trabajo.
+                            </p>
+                        </p>
+                    </section>
+                    <section id="cmdRm">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Eliminar Archivos
+                        </p>
+                        <br>
+                        <p>
+                            <b> git rm </b>
+                            <br>
+                            <br>
+                            Para eliminar archivos de Git, debes eliminarlos de tus archivos rastreados 
+                            (o mejor dicho, eliminarlos del área de preparación) y luego confirmar. 
+                            Para ello existe el comando git rm, que además elimina el archivo de tu 
+                            directorio de trabajo de manera que no aparezca la próxima vez como un 
+                            archivo no rastreado. 
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/cambios/cmdRm.png" alt="Img de copias copiasInstantaneas">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                Si modificaste el archivo y ya lo habías añadido al índice, tendrás que 
+                                forzar su eliminación con la opción -f. Esta propiedad existe por seguridad,
+                                 para prevenir que elimines accidentalmente datos que aun no han sido 
+                                 guardados como una instantánea y que por lo tanto no podrás recuperar luego 
+                                 con Git.
+                            </p>
+                        </p>
+                    </section>
+                    <section id="cmdCheckout">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Cambiar de rama o restaurar archivos del árbol de trabajo
+                        </p>
+                        <br>
+                        <p>
+                            <b> git checkout </b>
+                            <br>
+                            <br>
+                            Actualiza archivos en el árbol de trabajo para que coincidan con la versión en 
+                            el índice o el árbol especificado. Si no se proporcionó una especificación de 
+                            ruta, git checkout también actualizará HEAD para establecer la rama especificada 
+                            como la rama actual. 
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/cambios/cmdCheckout.png" alt="Img de copias copiasInstantaneas">
+                            </p>
+                        </p>
+                    </section>
+                </div>
+        </section>
+    </section>
+
+    <footer id="basePie">
+        <section id="pie">
+            <section class="columnaUno">
+                <h3><a class="pieLogo" href="./index.html">Tutorial git<img src="../img/logoGit.png" alt=""> </a></h3>
+            </section>
+            <section class="columnaDos">
+                Copyright © 2021 MRRM Inc.<br>
+                Todos los derechos reservados. <br>
+                By Martín Roberto
+            </section>
+        </section>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

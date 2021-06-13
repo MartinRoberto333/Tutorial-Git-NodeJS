@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Tutorial git - Área de trabajo</title>
+    <link rel="shortcut icon" href="../img/iconoPagina.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Tutorial git <img src="../img/logoGit.png" alt=""> </a></h1>
+    </header>
+        <section id="menu">
+            <ul>
+                <li><a class="puntero" href="./index.html">Introducción</a></li>
+                <li><a class="puntero" href="./confInicial.html">Conf. inicial</a>
+                    <ul>
+                        <li><a href="./confInicial.html#confEmail">usr.email</a></li>
+                        <li><a href="./confInicial.html#confUser">usr.name</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./areaTrabajo.html" class="puntero">Área de trabajo</a>
+                    <ul>
+                        <li><a href="./areaTrabajo.html#cmdInit">init</a></li>
+                        <li><a href="./areaTrabajo.html#cmdClone">clone</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./cambios.html" class="puntero">Cambios</a>
+                    <ul>
+                        <li><a href="./cambios.html#cmdAdd">add</a></li>
+                        <li><a href="./cambios.html#cmdRestore">restore</a></li>
+                        <li><a href="./cambios.html#cmdRm">rm</a></li>
+                        <li><a href="./cambios.html#cmdCheckout">checkout</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./historialEstado.html" class="puntero">Historial/Estado</a>
+                    <ul>
+                        <li><a href="./historialEstado.html#cmdDiff">diff</a></li>
+                        <li><a href="./historialEstado.html#cmdLog">log</a></li>
+                        <li><a href="./historialEstado.html#cmdStatus">status</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./ramificacion.html" class="puntero">Ramificación</a>
+                    <ul>
+                        <li><a href="./ramificacion.html#cmdBranch">branch</a></li>
+                        <li><a href="./ramificacion.html#cmdCommit">commit</a></li>
+                        <li><a href="./ramificacion.html#cmdMarge">marge</a></li>
+                        <li><a href="./ramificacion.html#cmdSwitch">switch</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./colaboracion.html" class="puntero">Colaboración</a>
+                    <ul>
+                        <li><a href="./colaboracion.html#cmdFetch">fetch</a></li>
+                        <li><a href="./colaboracion.html#cmdPull">pull</a></li>
+                        <li><a href="./colaboracion.html#cmdPush">push</a></li>
+                        <li><a href="./colaboracion.html#cmdRemote">remote</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+    <section id="contenido">
+        <section id="usrEmail" class="comandoGit">
+            <h2>Área de trabajo</h2><br><br>
+                <div>
+                    
+                    <section id="cmdInit">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Inicializando un repositorio en un directorio existente
+                        </p>
+                        <br>
+                        <p>
+                            <b> git init </b>
+                            <br>
+                            <br>
+                            Esto crea un subdirectorio nuevo llamado .git, el cual contiene todos los archivos necesarios del repositorio
+                            (un esqueleto de un repositorio de Git). Todavía no hay nada en tu proyecto que esté bajo seguimiento.
+                            <br>
+                            <p>
+                                Es importante verificar que nos encontremos en la carpeta de nuestro proyecto antes de dar inicio con git.
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/areaTrabajo/cmdInit.png" >
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                Podemos verificar la estructura de Git generada, accediendo a nuestro gestor de archivos e ingresando a 
+                                nuestro proyecto donde hemos iniciado git.
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/areaTrabajo/carpetaGit.png" >
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                    <section id="cmdClone">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Clonando un repositorio existente
+                        </p>
+                        <br>
+                        <p>
+                            <b> git clone </b>
+                            <br>
+                            <br>
+                            Si deseas obtener una copia de un repositorio Git existente — por 
+                            ejemplo, un proyecto en el que te gustaría contribuir — el comando 
+                            que necesitas es git clone. 
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/areaTrabajo/cmdClone.png" >
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                Git recibe una copia de casi todos los datos que tiene el servidor. 
+                                Cada versión de cada archivo de la historia del proyecto es descargada 
+                                por defecto cuando ejecutas git clone. De hecho, si el disco de tu 
+                                servidor se corrompe, puedes usar cualquiera de los clones en cualquiera 
+                                de los clientes para devolver el servidor al estado en el que estaba 
+                                scuando fue clonado.
+                            </p>
+                        </p>
+                    </section>
+                </div>
+        </section>
+    </section>
+
+    <footer id="basePie">
+        <section id="pie">
+            <section class="columnaUno">
+                <h3><a class="pieLogo" href="./index.html">Tutorial git<img src="../img/logoGit.png" alt=""> </a></h3>
+            </section>
+            <section class="columnaDos">
+                Copyright © 2021 MRRM Inc.<br>
+                Todos los derechos reservados. <br>
+                By Martín Roberto
+            </section>
+        </section>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

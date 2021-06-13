@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Tutorial git - Historial/Estado</title>
+    <link rel="shortcut icon" href="../img/iconoPagina.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Tutorial git <img src="../img/logoGit.png" alt=""> </a></h1>
+    </header>
+        <section id="menu">
+            <ul>
+                <li><a class="puntero" href="./index.html">Introducción</a></li>
+                <li><a class="puntero" href="./confInicial.html">Conf. inicial</a>
+                    <ul>
+                        <li><a href="./confInicial.html#confEmail">usr.email</a></li>
+                        <li><a href="./confInicial.html#confUser">usr.name</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./areaTrabajo.html" class="puntero">Área de trabajo</a>
+                    <ul>
+                        <li><a href="./areaTrabajo.html#cmdInit">init</a></li>
+                        <li><a href="./areaTrabajo.html#cmdClone">clone</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./cambios.html" class="puntero">Cambios</a>
+                    <ul>
+                        <li><a href="./cambios.html#cmdAdd">add</a></li>
+                        <li><a href="./cambios.html#cmdRestore">restore</a></li>
+                        <li><a href="./cambios.html#cmdRm">rm</a></li>
+                        <li><a href="./cambios.html#cmdCheckout">checkout</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./historialEstado.html" class="puntero">Historial/Estado</a>
+                    <ul>
+                        <li><a href="./historialEstado.html#cmdDiff">diff</a></li>
+                        <li><a href="./historialEstado.html#cmdLog">log</a></li>
+                        <li><a href="./historialEstado.html#cmdStatus">status</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./ramificacion.html" class="puntero">Ramificación</a>
+                    <ul>
+                        <li><a href="./ramificacion.html#cmdBranch">branch</a></li>
+                        <li><a href="./ramificacion.html#cmdCommit">commit</a></li>
+                        <li><a href="./ramificacion.html#cmdMarge">marge</a></li>
+                        <li><a href="./ramificacion.html#cmdSwitch">switch</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./colaboracion.html" class="puntero">Colaboración</a>
+                    <ul>
+                        <li><a href="./colaboracion.html#cmdFetch">fetch</a></li>
+                        <li><a href="./colaboracion.html#cmdPull">pull</a></li>
+                        <li><a href="./colaboracion.html#cmdPush">push</a></li>
+                        <li><a href="./colaboracion.html#cmdRemote">remote</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+    <section id="contenido">
+        <section id="usrEmail" class="comandoGit">
+            <h2>Historial/Estado</h2><br><br>
+                <div>
+                    
+                    <section id="cmdDiff">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Ver los Cambios Preparados y No Preparados
+                        </p>
+                        <br>
+                        <p>
+                            <b> git diff </b>
+                            <br>
+                            <br>
+                            Muestra las líneas exactas que fueron añadidas y eliminadas.
+                            Para ver qué has cambiado pero aun no has preparado, escribe git diff sin más parámetros:
+
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdDiff.png">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                Si quieres ver lo que has preparado y será incluido en la próxima confirmación, puedes usar 
+                                <b>git diff --staged</b>. Este comando compara tus cambios preparados con la última instantánea 
+                                confirmada.
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdDiff2.png">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <b>git diff --cached</b> para ver que has preparado hasta ahora (--staged y --cached son sinónimos):
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdDiff3.png">
+                            </p>
+                        </p>
+                    </section>
+                    <section id="cmdLog">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Ver el Historial de Confirmaciones
+                        </p>
+                        <br>
+                        <p>
+                            <b> git log </b>
+                            <br>
+                            <br>
+                            Después de haber hecho varias confirmaciones, 
+                            probablemente quieras mirar atrás para ver qué 
+                            modificaciones se han llevado a cabo. La herramienta 
+                            más básica y potente para hacer esto es el comando <b> git log </b>.
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLog.png">
+                            </p>
+                            <br>
+                            <br>
+                            El comando git log proporciona gran cantidad de opciones 
+                            para mostrarte exactamente lo que buscas.
+                            <br>
+                            <br>
+                            Una de las opciones más útiles es <b> -p</b>, que muestra las 
+                            diferencias introducidas en cada confirmación. 
+                            <br> 
+                            También puedes usar la opción <b>-2</b>, que hace que se 
+                            muestren únicamente las dos últimas entradas del historial:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLogP2.png">
+                            </p>
+                            <br>
+                            <br>
+                            También puedes usar con <b> git log </b>una serie de opciones de 
+                            resumen. Por ejemplo, si quieres ver algunas estadísticas 
+                            de cada confirmación, puedes usar la opción <b> --stat</b>:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLogStat.png">
+                            </p>
+                            <br>
+                            <br>
+                            Otra opción realmente útil es <b> --pretty</b>, que modifica el formato de 
+                            la salida. Tienes unos cuantos estilos disponibles. La opción <b> oneline </b>
+                            imprime cada confirmación en una única línea, lo que puede resultar
+                             útil si estás analizando gran cantidad de confirmaciones. Otras 
+                             opciones son <b> short, full y fuller,</b> que muestran la salida en un formato 
+                             parecido, pero añadiendo menos o más información, respectivamente:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLogPretty.png">
+                            </p>
+                            <br>
+                            <br>
+                            La opción más interesante es <b> format</b>, que te permite especificar tu propio formato. 
+                            Esto resulta especialmente útil si estás generando una salida para que sea analizada 
+                            por otro programa.
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLogFormat.png">
+                            </p>
+                            <br>
+                            <br>
+                            <b> git log --pretty=format </b>lista algunas de las opciones más útiles aceptadas por format.
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLogFormatTabla.png">
+                            </p>
+                            <br>
+                            <br>
+                            <b> git log </b>lista las opciones vistas hasta ahora, y algunas otras opciones de formateo que pueden resultarte 
+                            útiles, así como su efecto sobre la salida.
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLogTabla.png">
+                            </p>
+                            <br>
+                            <br>
+                            Además de las opciones de formateo, git log acepta una serie de opciones para limitar su salida. Las opciones 
+                            temporales como <b> --since (desde) y --until (hasta) </b> sí que resultan muy útiles. Por ejemplo, este comando lista 
+                            todas las confirmaciones hechas durante las dos últimas semanas:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLogSince.png">
+                            </p>
+                            <br>
+                            <br>
+                            Este comando acepta muchos formatos. Puedes indicar una fecha concreta <b>("2008-01-15"), o relativa, como "2 years 1 
+                            day 3 minutes ago" ("hace 2 años, 1 día y 3 minutos")</b>. 
+                            <br>
+                            <br>
+                            La opción <b> --author </b>te permite filtrar por autor, y <b> --grep </b>te permite buscar palabras clave entre los mensajes de 
+                            confirmación. (Ten en cuenta que si quieres aplicar ambas opciones simultáneamente, tienes que añadir <b> --all-match</b>, 
+                            o el comando mostrará las confirmaciones que cumplan cualquiera de las dos, no necesariamente las dos a la vez.)
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdLogLimitar.png">
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                    <section id="cmdStatus">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Revisando el Estado de los Archivos
+                        </p>
+                        <br>
+                        <p>
+                            <b> git status </b>
+                            <br>
+                            <br>
+                            La herramienta principal para determinar qué archivos están en qué 
+                            estado es el comando git status.
+
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/historialEstado/cmdStatus.png">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                Git no los incluirá en tu próximo <b> commit </b> a menos que se lo indiques 
+                                explícitamente. Se comporta así para evitar incluir accidentalmente 
+                                archivos binarios o cualquier otro archivo que no quieras incluir. 
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                </div>
+        </section>
+    </section>
+
+    <footer id="basePie">
+        <section id="pie">
+            <section class="columnaUno">
+                <h3><a class="pieLogo" href="./index.html">Tutorial git<img src="../img/logoGit.png" alt=""> </a></h3>
+            </section>
+            <section class="columnaDos">
+                Copyright © 2021 MRRM Inc.<br>
+                Todos los derechos reservados. <br>
+                By Martín Roberto
+            </section>
+        </section>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

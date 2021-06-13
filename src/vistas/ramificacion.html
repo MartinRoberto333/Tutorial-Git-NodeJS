@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>Tutorial git - Historial</title>
+    <link rel="shortcut icon" href="../img/iconoPagina.png">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Tutorial git <img src="../img/logoGit.png" alt=""> </a></h1>
+    </header>
+        <section id="menu">
+            <ul>
+                <li><a class="puntero" href="./index.html">Introducción</a></li>
+                <li><a class="puntero" href="./confInicial.html">Conf. inicial</a>
+                    <ul>
+                        <li><a href="./confInicial.html#confEmail">usr.email</a></li>
+                        <li><a href="./confInicial.html#confUser">usr.name</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./areaTrabajo.html" class="puntero">Área de trabajo</a>
+                    <ul>
+                        <li><a href="./areaTrabajo.html#cmdInit">init</a></li>
+                        <li><a href="./areaTrabajo.html#cmdClone">clone</a></li>
+                        
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./cambios.html" class="puntero">Cambios</a>
+                    <ul>
+                        <li><a href="./cambios.html#cmdAdd">add</a></li>
+                        <li><a href="./cambios.html#cmdRestore">restore</a></li>
+                        <li><a href="./cambios.html#cmdRm">rm</a></li>
+                        <li><a href="./cambios.html#cmdCheckout">checkout</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./historialEstado.html" class="puntero">Historial/Estado</a>
+                    <ul>
+                        <li><a href="./historialEstado.html#cmdDiff">diff</a></li>
+                        <li><a href="./historialEstado.html#cmdLog">log</a></li>
+                        <li><a href="./historialEstado.html#cmdStatus">status</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./ramificacion.html" class="puntero">Ramificación</a>
+                    <ul>
+                        <li><a href="./ramificacion.html#cmdBranch">branch</a></li>
+                        <li><a href="./ramificacion.html#cmdCommit">commit</a></li>
+                        <li><a href="./ramificacion.html#cmdMarge">marge</a></li>
+                        <li><a href="./ramificacion.html#cmdSwitch">switch</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./colaboracion.html" class="puntero">Colaboración</a>
+                    <ul>
+                        <li><a href="./colaboracion.html#cmdFetch">fetch</a></li>
+                        <li><a href="./colaboracion.html#cmdPull">pull</a></li>
+                        <li><a href="./colaboracion.html#cmdPush">push</a></li>
+                        <li><a href="./colaboracion.html#cmdRemote">remote</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    
+    <section id="contenido">
+        <section id="usrEmail" class="comandoGit">
+            <h2>Ramificaciones en Git</h2><br><br>
+                <div>
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            ¿Qué es una rama?
+                        </p>
+                        <br>
+                            Git no los almacena de forma incremental (guardando solo diferencias), 
+                            sino que los almacena como una serie de instantáneas (copias puntuales 
+                            de los archivos completos, tal y como se encuentran en ese momento).
+                            <br>
+                            En cada confirmación de cambios (commit), Git almacena una instantánea 
+                            de tu trabajo preparado. Dicha instantánea contiene además unos metadatos 
+                            con el autor y el mensaje explicativo, y uno o varios apuntadores a las 
+                            confirmaciones (commit) que sean padres directos de esta (un padre en los 
+                            casos de confirmación normal, y múltiples padres en los casos de estar 
+                            confirmando una fusión (merge) de dos o más ramas).
+                            <br>
+                            <br>
+                            Una rama Git es simplemente un apuntador móvil apuntando a una de 
+                            esas confirmaciones. La rama por defecto de Git es la rama master. 
+                            Con la primera confirmación de cambios que realicemos, se creará 
+                            esta rama principal master apuntando a dicha confirmación. En cada 
+                            confirmación de cambios que realicemos, la rama irá avanzando 
+                            automáticamente.
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/definicionRama.png" >
+                            </p>
+                        <br>
+                    <section id="cmdBranch">
+                        <p>
+                            <br>
+                            <br>
+                            <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                                Crear una Rama Nueva
+                            </p>
+                            <br>
+                            <b> git branch </b>
+                            <br>
+                            <br>
+                            Crea un nuevo apuntador para que lo puedas mover libremente. 
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/cmdBranch.png">
+                            </p>
+                            <br>
+                            <br>
+                            <b> git branch sin parametros</b>
+                            <br>
+                            <br>
+                            Si lo lanzas sin parámetros, 
+                            obtienes una lista de las ramas presentes en tu proyecto:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/cmdBranchSinParamtros.png">
+                            </p>
+                            <br>
+                            <br>
+                            <b> git branch -v</b>
+                            <br>
+                            <br>
+                            Muestra la última confirmación de cambios en cada rama
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/cmdBranchV.png">
+                            </p>
+                            <br>
+                            <br>
+                            <b> git branch -d</b>
+                            <br>
+                            <br>
+                            Elimina una rama que ha fusionado los trabajos con otra rama.
+                            <br>
+                            <br>
+                            <b> git branch -D</b>
+                            <br>
+                            <br>
+                            Elimina una rama que <b>no</b> ha fusionado los trabajos con otra rama.
+                            Debemos de considerar, si realmente deseamos borrar la rama y perder el 
+                            trabajo contenido en ella.
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                    <section id="cmdCommit">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Confirmar tus Cambios
+                        </p>
+                        <br>
+                        <p>
+                            <b> git commit </b>
+                            <br>
+                            <br>
+                            Ahora que tu área de preparación está como quieres, puedes confirmar 
+                            tus cambios. Recuerda que cualquier cosa que no esté preparada  
+                            cualquier archivo que hayas creado o modificado y que no hayas 
+                            agregado con <b> git add</b> desde su edición no será confirmado. 
+                            Se mantendrán como archivos modificados en tu disco. En este 
+                            caso, digamos que la última vez que ejecutaste <b> git status </b> verificaste 
+                            que todo estaba preparado y que estás listo para confirmar tus cambios. 
+                            La forma más sencilla de confirmar es escribiendo git commit:
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/cmdCommit.png">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                            Inicia nuestro editor de texto por default, en donde debemos de escribir 
+                            el contenido del mensaje, el cual servirá para identificar la versión que 
+                            estamos agregando al repositorio de git. 
+                            <br>
+                            Una vez terminemos de escribir el mensaje, pulsamos la combinación<b> 
+                            ctrl + O </b> para guardar la versión, confirmamos con un enter, y 
+                            presionamos <b> ctrl + X </b> para salir del editor de texto.
+                            <br>
+                            <br>
+                            Para omitir la apertura del editor de texto, solo debemos de escribir de 
+                            la siguiente manera el commit:
+                            <br>
+                            <br>
+                            <b> git commit -m “mensaje” </b> 
+                            <br>
+                            <br>
+                            Confirmamos con un enter, y listo hemos almacenado una versión de nuestro 
+                            proyecto.
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/cmdCommitM.png">
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+
+                    <section id="cmdMarge">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Ver los Cambios Preparados y No PreparadoscmdMarge
+                        </p>
+                        <br>
+                        <p>
+                            <b> git merge </b>
+                            <br>
+                            <br>
+                            Como primer paso debemos de activar (<b>checkout</b>) la rama donde deseas fusionar 
+                            y lanza el comando <b>git merge</b>:
+
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/cmdCheckoutMerge.png">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                            Seguido introducimos el comando de <b>git merge <i>nombre de la rama a fusionar</i></b>.
+                            <br>
+                            <br>
+                            Por ejemplo ingresamos el nombre de otraRama.
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/cmdMerge.png">
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                                Ahora que todo tu trabajo ya está fusionado con la rama principal, no tienes 
+                                necesidad de la otra rama. Por lo que puedes borrarla, con el comando 
+                                <b>git branch -d <i>nombre de la rma a borrar</i></b>.
+                            </p>
+                            <br>
+                            <br>
+                        </p>
+                    </section>
+                    <section id="cmdSwitch">
+                        <br>
+                        <br>
+                        <p style="color: darkgoldenrod; font-weight: 800; font-size: 1.2em;">
+                            Cambiar de rama
+                        </p>
+                        <br>
+                        <p>
+                            <b> git switch</b>
+                            <br>
+                            <br>
+                            Cambia a una rama específica. El árbol de trabajo y el índice se 
+                            actualizan para que coincidan con la rama. Todas las nuevas 
+                            sconfirmaciones se agregarán a la punta de esta rama.
+                            <br>
+                            <br>
+                            <p>
+                                <img class="imagenes" src="../img/ramificaciones/cmdSwitch.png">
+                            </p>
+                           
+                        </p>
+                    </section>
+                </div>
+        </section>
+    </section>
+
+    <footer id="basePie">
+        <section id="pie">
+            <section class="columnaUno">
+                <h3><a class="pieLogo" href="./index.html">Tutorial git<img src="../img/logoGit.png" alt=""> </a></h3>
+            </section>
+            <section class="columnaDos">
+                Copyright © 2021 MRRM Inc.<br>
+                Todos los derechos reservados. <br>
+                By Martín Roberto
+            </section>
+        </section>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+</html>
