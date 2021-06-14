@@ -9,13 +9,7 @@ servidor.use(express.static("public"))
 
 
 //rutas(routes)
-
-servidor.get("/", (req,res) =>
-{
-    //res.send("Ok")
-    res.sendFile(path.join(__dirname,"vistas/index.html"))
-    
-});
+servidor.use(require("./rutas/solicitudes.js"))
 
 
 //Servidor escuchando
