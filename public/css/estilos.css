@@ -104,6 +104,11 @@ header a
   cursor: context-menu;
 }
 
+#menu a.activo {
+  background-color: #04AA6D;
+  color: white;
+}
+
 /*Contenido de la pagina*/
 #contenido
 {
